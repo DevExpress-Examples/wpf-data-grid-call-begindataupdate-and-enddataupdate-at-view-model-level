@@ -1,0 +1,40 @@
+﻿<Window x:Class="BeginEndDataUpdate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:local="clr-namespace:BeginEndDataUpdate"
+        mc:Ignorable="d"
+        xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <dxg:GridControl ItemsSource="{Binding Source}" AllowLiveDataShaping="True" AutoExpandAllGroups="True" >
+            <dxg:GridControl.View>
+                <dxg:TableView ShowFixedTotalSummary="True" />
+            </dxg:GridControl.View>
+            <mvvm:Interaction.Behaviors>
+                <local:CustomService />
+            </mvvm:Interaction.Behaviors>
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Name" />
+                <dxg:GridColumn FieldName="Value" GroupIndex="1" SortIndex="1" />
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.TotalSummary>
+                <dxg:GridSummaryItem FieldName="Value" SummaryType="Sum" Alignment="Right" />
+            </dxg:GridControl.TotalSummary>
+        </dxg:GridControl>
+        <Button Grid.Row="1"
+                Content="Update source"
+                HorizontalAlignment="Center"
+                Command="{Binding UpdateSourceCommand}" />
+    </Grid>
+</Window>
