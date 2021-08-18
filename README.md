@@ -1,2 +1,1 @@
-# how-to-call-data-grid-BeginDataUpdate-and-EndDataUpdate-at-the-view-model-level
-WPF, GridControl, BeginDataUpdate, EndDataUpdate, Custom Service
+# How to call the BeginDataUpdate and EndDataUpdate methods at the View Model level
