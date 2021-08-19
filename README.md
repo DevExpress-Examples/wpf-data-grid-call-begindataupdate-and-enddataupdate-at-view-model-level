@@ -1,5 +1,5 @@
 # How to Call the BeginDataUpdate and EndDataUpdate Methods at the View Model Level
-This example demostrates how to call the [BeginDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.BeginDataUpdate) and [EndDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.EndDataUpdate) methods. These methods allow you to lock the [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl). You accumulate changes and update data in one action. 
+This example demostrates how to call the [BeginDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.BeginDataUpdate) and [EndDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.EndDataUpdate) methods. These methods allow you to lock the [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl). You can accumulate changes and update data in one action. 
 
 Create a custom service that allows you to call the GridControl methods. 
 
