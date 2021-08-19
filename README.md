@@ -1,7 +1,8 @@
 # How to Call the BeginDataUpdate and EndDataUpdate Methods at the View Model Level
-This example demostrates how to call the [BeginDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.BeginDataUpdate) and [EndDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.EndDataUpdate) methods in the MVVM application. These methods allow you to accumulate changes and update data within the GridControl in one action. 
+This example demostrates how to call the [BeginDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.BeginDataUpdate) and [EndDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.EndDataUpdate) methods in a MVVM application. These methods allow you to accumulate changes and update data within the GridControl in one action. 
 
-Create a custom service that allows you to call the GridControl methods. 
+Follow these steps to use the methods in your application:
+1. Create a custom service that allows you to call the GridControl methods. 
 
 ```cs
 ...
@@ -25,7 +26,18 @@ class CustomService : ServiceBase, ICustomService {
 }
 ...
 ```
-If you inherit your View Model class from ViewModelBase, you can access to the service as follows:
+
+2. Add the service to your View and assosiate this service with the GridConrol. 
+```xaml
+<dxg:GridControl>
+    <mvvm:Interaction.Behaviors>
+        <local:CustomService />
+    </mvvm:Interaction.Behaviors>
+</dxg:GridControl>
+...
+```
+
+3. If you inherit your View Model class from ViewModelBase, you can access to the service as follows:
 
 ```cs
 public class ViewModel : ViewModelBase {
@@ -42,17 +54,6 @@ public class ViewModel : ViewModelBase {
         CustomService.EndUpdate();
     }
 }
-```
-
-
-Add the service to your View and assosiate this service with the GridConrol. 
-```xaml
-<dxg:GridControl>
-    <mvvm:Interaction.Behaviors>
-        <local:CustomService />
-    </mvvm:Interaction.Behaviors>
-</dxg:GridControl>
-...
 ```
 
 Refer to the following topics for more information: 
