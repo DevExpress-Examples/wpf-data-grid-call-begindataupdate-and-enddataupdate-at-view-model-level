@@ -2,7 +2,8 @@
 This example demostrates how to call the [BeginDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.BeginDataUpdate) and [EndDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.EndDataUpdate) methods in a MVVM application. These methods allow you to accumulate changes and update data within the GridControl in one action. 
 
 Follow these steps to use the methods in your application:
-1. Create a custom service that allows you to call the GridControl methods. 
+
+1\. Create a custom service that allows you to call the GridControl methods. 
 
 ```cs
 ...
@@ -27,7 +28,7 @@ class CustomService : ServiceBase, ICustomService {
 ...
 ```
 
-2. Add the service to your View and assosiate this service with the GridConrol. 
+2\. Add the service to your View and assosiate this service with the GridConrol. 
 ```xaml
 <dxg:GridControl>
     <mvvm:Interaction.Behaviors>
@@ -37,7 +38,7 @@ class CustomService : ServiceBase, ICustomService {
 ...
 ```
 
-3. If you inherit your View Model class from ViewModelBase, you can access to the service as follows:
+3\. Access to the services at the View Model level. If you inherit your View Model class from ViewModelBase, you can access to the service as follows:
 
 ```cs
 public class ViewModel : ViewModelBase {
@@ -56,7 +57,11 @@ public class ViewModel : ViewModelBase {
 }
 ```
 
-Refer to the following topics for more information: 
+If you use Generated View Models or Custom View Models, refer to the following topics: 
+- [Services in Generated View Models](https://docs.devexpress.com/WPF/17447/mvvm-framework/services/services-in-generated-view-models)
+- [Services in Custom View Models](https://docs.devexpress.com/WPF/17450/mvvm-framework/services/services-in-custom-viewmodels)
+
+## See Also 
 - [Lock GridControl Updates](https://docs.devexpress.com/WPF/115836/controls-and-libraries/data-grid/performance-improvement/frequent-data-updates#lock-gridcontrol-updates)
 - [How to Create a Custom Service](https://docs.devexpress.com/WPF/16920/mvvm-framework/services/how-to-create-a-custom-service)
 - [Services in View Models](https://docs.devexpress.com/WPF/17414/mvvm-framework/services).
