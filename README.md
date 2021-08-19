@@ -1,5 +1,5 @@
 # How to Call the BeginDataUpdate and EndDataUpdate Methods at the View Model Level
-This example demostrates how to call the [BeginDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.BeginDataUpdate) and [EndDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.EndDataUpdate) methods. These methods allow you to lock the [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl). You can accumulate changes and update data in one action. 
+This example demostrates how to call the [BeginDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.BeginDataUpdate) and [EndDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.EndDataUpdate) methods in the MVVM application. These methods allow you to accumulate changes and update data within the GridControl in one action. 
 
 Create a custom service that allows you to call the GridControl methods. 
 
@@ -25,7 +25,7 @@ class CustomService : ServiceBase, ICustomService {
 }
 ...
 ```
-Add the service to your View Model and use the service's methods in a command that updates GridControl data. 
+If you inherit your View Model class from ViewModelBase, you can access to the service as follows:
 
 ```cs
 public class ViewModel : ViewModelBase {
@@ -44,7 +44,8 @@ public class ViewModel : ViewModelBase {
 }
 ```
 
-Use the custom behavior to assosiate the GridConrol with your View Model. 
+
+Add the service to your View and assosiate this service with the GridConrol. 
 ```xaml
 <dxg:GridControl>
     <mvvm:Interaction.Behaviors>
@@ -54,4 +55,7 @@ Use the custom behavior to assosiate the GridConrol with your View Model.
 ...
 ```
 
-Refer to the following topic for more information: [Frequent Data Updates](https://docs.devexpress.com/WPF/115836/controls-and-libraries/data-grid/performance-improvement/frequent-data-updates#lock-gridcontrol-updates). 
+Refer to the following topics for more information: 
+- [Lock GridControl Updates](https://docs.devexpress.com/WPF/115836/controls-and-libraries/data-grid/performance-improvement/frequent-data-updates#lock-gridcontrol-updates)
+- [How to Create a Custom Service](https://docs.devexpress.com/WPF/16920/mvvm-framework/services/how-to-create-a-custom-service)
+- [Services in View Models](https://docs.devexpress.com/WPF/17414/mvvm-framework/services).
