@@ -28,7 +28,7 @@ class CustomService : ServiceBase, ICustomService {
 ...
 ```
 
-2\. Add the service to your View and assosiate this service with the GridConrol. 
+2\. Add the service to your View and assosiate this service with the GridControl. 
 ```xaml
 <dxg:GridControl>
     <mvvm:Interaction.Behaviors>
@@ -38,7 +38,7 @@ class CustomService : ServiceBase, ICustomService {
 ...
 ```
 
-3\. Access to the services at the View Model level. If you inherit your View Model class from ViewModelBase, you can access to the service as follows:
+3\. Access to the service at the View Model level. If you inherit your View Model class from ViewModelBase, you can access to the service as follows:
 
 ```cs
 public class ViewModel : ViewModelBase {
