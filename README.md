@@ -67,6 +67,6 @@ If you use Generated View Models or Custom View Models, refer to the following t
 - [Services in Custom View Models](https://docs.devexpress.com/WPF/17450/mvvm-framework/services/services-in-custom-viewmodels)
 
 ## See Also 
-- [Lock GridControl Updates](https://docs.devexpress.com/WPF/115836/controls-and-libraries/data-grid/performance-improvement/frequent-data-updates#lock-gridcontrol-updates)
+- [Lock Updates](https://docs.devexpress.com/WPF/115836/controls-and-libraries/data-grid/performance-improvement/frequent-data-updates#lock-updates)
 - [How to Create a Custom Service](https://docs.devexpress.com/WPF/16920/mvvm-framework/services/how-to-create-a-custom-service)
 - [Services in View Models](https://docs.devexpress.com/WPF/17414/mvvm-framework/services).
