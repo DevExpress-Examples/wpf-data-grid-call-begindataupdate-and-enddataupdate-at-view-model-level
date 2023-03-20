@@ -3,7 +3,9 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1022778)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# How to Call the BeginDataUpdate and EndDataUpdate Methods at the View Model Level
+
+# WPF Data Grid - Call the BeginDataUpdate and EndDataUpdate Methods at the View Model Level
+
 This example demostrates how to call the [BeginDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.BeginDataUpdate) and [EndDataUpdate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataControlBase.EndDataUpdate) methods in a MVVM application. These methods allow you to accumulate changes and update data within the GridControl in one action. 
 
 Follow these steps to use the methods in your application:
@@ -66,7 +68,21 @@ If you use Generated View Models or Custom View Models, refer to the following t
 - [Services in Generated View Models](https://docs.devexpress.com/WPF/17447/mvvm-framework/services/services-in-generated-view-models)
 - [Services in Custom View Models](https://docs.devexpress.com/WPF/17450/mvvm-framework/services/services-in-custom-viewmodels)
 
-## See Also 
+## Files to Review
+
+- [CustomService.cs](./CS/BeginEndDataUpdate/CustomService.cs) (VB: [CustomService.vb](./VB/BeginEndDataUpdate/CustomService.vb))
+- [ViewModel.cs](./CS/BeginEndDataUpdate/ViewModel.cs) (VB: [ViewModel.vb](./VB/BeginEndDataUpdate/ViewModel.vb))
+- [MainWindow.xaml](./CS/BeginEndDataUpdate/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/BeginEndDataUpdate/MainWindow.xaml))
+
+## Documentation
+
 - [Lock Updates](https://docs.devexpress.com/WPF/115836/controls-and-libraries/data-grid/performance-improvement/frequent-data-updates#lock-updates)
 - [How to Create a Custom Service](https://docs.devexpress.com/WPF/16920/mvvm-framework/services/how-to-create-a-custom-service)
-- [Services in View Models](https://docs.devexpress.com/WPF/17414/mvvm-framework/services).
+- [Services in View Models](https://docs.devexpress.com/WPF/17414/mvvm-framework/services)
+
+## More Examples
+
+- [WPF Data Grid - Process Data Updates](https://github.com/DevExpress-Examples/How-to-effectively-process-data-updates-in-WPF-GridControl)
+- [Data Grid for WPF - Update Data in a Separate Thread](https://github.com/DevExpress-Examples/wpf-data-grid-update-data-in-a-separate-thread)
+- [Data Grid for WPF - Refresh the Data Grid on a Timer](https://github.com/DevExpress-Examples/wpf-data-grid-refresh-on-timer)
+- [WPF MVVM Framework - Create a Custom Service](https://github.com/DevExpress-Examples/wpf-mvvm-framework-create-a-custom-service)
