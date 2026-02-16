@@ -72,7 +72,7 @@ If you use Generated View Models or Custom View Models, refer to the following t
 - [How to Create a Custom Service](https://docs.devexpress.com/WPF/16920/mvvm-framework/services/how-to-create-a-custom-service)
 - [Services in View Models](https://docs.devexpress.com/WPF/17414/mvvm-framework/services).
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-data-grid-call-begindataupdate-and-enddataupdate-at-view-model-level&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-data-grid-call-begindataupdate-and-enddataupdate-at-view-model-level&~~~was_helpful=no)
 
